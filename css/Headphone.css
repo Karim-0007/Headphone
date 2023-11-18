@@ -1,0 +1,533 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+a:hover {
+  color: #da793c;
+}
+/* full container */
+.container {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* navbar  */
+.container .navbar {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.container .navbar img {
+  height: 25px;
+  width: 25px;
+}
+
+.container .navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.container .navbar ul li {
+  list-style: none;
+  margin: 0 0 0 25px;
+}
+
+.container .navbar ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.container .navbar ul li a:hover {
+  color: #da793c;
+}
+.lists-icon {
+  display: none;
+}
+.closeX {
+  display: none;
+}
+
+/* content */
+/* ..................................Home......................... */
+
+.container .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 90px;
+  margin: 0 0 200px;
+}
+
+/* socal bar..................................................... */
+.container .social {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 250px;
+  left: -50px;
+  color: rgba(240, 240, 240, 0.534);
+  animation: social 1s ease-out;
+}
+
+@keyframes social {
+  0% {
+    transform: translateY(-30px);
+  }
+}
+
+.container .social p {
+  display: block;
+  margin: 0 0 0 0;
+  padding: 50px 0;
+  font-weight: 600;
+  transform: rotate(90deg);
+}
+
+.container .social .icon {
+  transform: rotate(90deg);
+  padding: 90px 0;
+}
+.container .social #i {
+  font-size: 20px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+.container .social #i:hover {
+  color: rgb(250, 156, 15);
+}
+
+/* title head */
+.container .content .title {
+  display: flex;
+}
+.container .content .title h1 {
+  color: #e2671a;
+  font-size: 400px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Tool */
+.container .content .tools {
+  position: relative;
+  top: -235px;
+  right: -155px;
+  animation: tool 1s ease-out;
+}
+@keyframes tool {
+  0% {
+    transform: translateY(-10px);
+  }
+}
+.container .content .tools img {
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 150px;
+  z-index: 1;
+}
+.container .content .tools span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  width: 46px;
+  border: none;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, rgb(46, 46, 46), rgb(8, 8, 8));
+  position: absolute;
+  top: -12px;
+  right: 295px;
+  z-index: 90;
+  font-size: 12px;
+  text-align: center;
+  color: aliceblue;
+}
+
+/* J...........................L */
+.container .content .title .J,
+.container .content .title .L {
+  z-index: 5;
+}
+.container .content .title .L {
+  animation: animationL 1.2s ease-out;
+}
+@keyframes animationL {
+  0% {
+    transform: translateX(30px);
+  }
+}
+.container .content .title .J {
+  animation: animationJ 1.2s ease-out;
+}
+
+@keyframes animationJ {
+  0% {
+    transform: translateX(-30px);
+  }
+}
+.container .content .title .L {
+  z-index: 5;
+}
+
+/* img head */
+.container .content img {
+  position: absolute;
+  height: 543px;
+  width: 457px;
+  bottom: -88px;
+  z-index: 1;
+}
+
+/* button in head */
+.container .content .buy {
+  position: absolute;
+  z-index: 50;
+  bottom: -33px;
+  color: aliceblue;
+  padding: 12px 25px;
+  border-radius: 22px;
+  text-align: center;
+  cursor: pointer;
+  background: linear-gradient(to right, rgb(46, 46, 46), rgb(8, 8, 8));
+  outline: none;
+  border: none;
+  animation: buy 1.2s linear;
+}
+@keyframes buy {
+  0% {
+    transform: translateY(40px);
+  }
+}
+
+.container .content .buy:hover {
+  background: linear-gradient(to right, rgb(75, 74, 74), rgb(8, 8, 8));
+}
+
+.container .content .buy .ic {
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+/* .............................................
+......................more about */
+.container .moreAbout {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 32px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+.container .moreAbout .content-moreAbout {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.container .moreAbout .content-moreAbout .text h1 {
+  font-size: 40px;
+}
+.container .moreAbout .content-moreAbout .text p {
+  color: grey;
+  font-size: 0.8em;
+  font-weight: 800;
+}
+.container .moreAbout img {
+  height: 400px;
+}
+.container .moreAbout .content-moreAbout a,
+.container .model a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 150px;
+  color: aliceblue;
+  border-radius: 22px;
+  text-align: center;
+  cursor: pointer;
+  background: linear-gradient(to right, rgb(46, 46, 46), rgb(8, 8, 8));
+  outline: none;
+  border: none;
+}
+.container .moreAbout .content-moreAbout a:hover,
+.container .model a:hover {
+  transition: 1s;
+  background: linear-gradient(to right, rgb(95, 95, 95), rgb(8, 8, 8));
+}
+.container .moreAbout .content-moreAbout a, .container .model a  #aboutic{
+
+  color: #ff7300;padding: 10px;font-size: 20px
+}
+/* ................................................. */
+/* ........................choose your favorite........ */
+/* ................................................. */
+
+.container .choose {
+  width: 100%;
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: aliceblue;
+}
+
+.container .choose .swiper-button-next,
+.container .choose .swiper-button-prev {
+  color: #e2671a;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+/* ............................................
+...........................model .............*/
+
+.container .model {
+  width: 100%;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: aliceblue;
+}
+.container .model .image {
+  margin-top: 50px;
+}
+.container .model .image img {
+  height: 380px;
+}
+
+.container .model .image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .model .image .mo1,
+.container .model .image .mo2,
+.container .model .image .mo3,
+.container .model .image .mo4 {
+  height: 35px;
+  position: absolute;
+  z-index: 90;
+}
+.container .model .image .mo1 {
+  top: 77px;
+  right: -33px;
+}
+
+.container .model .image .mo2 {
+  top: 220px;
+  right: 62px;
+}
+
+.container .model .image .mo3 {
+  top: 106px;
+  right: 244px;
+  transform: rotateY(208deg);
+}
+.container .model .image .mo4 {
+  top: 292px;
+  right: 319px;
+  transform: rotateY(190deg);
+}
+
+.container .model .image .s1,
+.container .model .image .s2,
+.container .model .image .s3,
+.container .model .image .s4 {
+  font-size: 17px;
+}
+.container .model .image .s1 {
+  top: 61px;
+  right: -178px;
+}
+
+.container .model .image .s2 {
+  top: 206px;
+  right: -84px;
+}
+
+.container .model .image .s3 {
+  top: 89px;
+  right: 308px;
+  transform: rotateY(0);
+}
+.container .model .image .s4 {
+  top: 276px;
+  right: 395px;
+  transform: rotateY(0);
+}
+
+.container .model .image span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 150px;
+  border: none;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, rgb(46, 46, 46), rgb(8, 8, 8));
+  position: absolute;
+  top: -12px;
+  right: 295px;
+  z-index: 90;
+  font-size: 12px;
+  text-align: center;
+  color: aliceblue;
+}
+
+/* ............................................ */
+/* section sponser/ */
+.container .sponser {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 100px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  margin: 100px 0;
+}
+.container .sponser img {
+  height: 40px;
+}
+/* .................................................. */
+.subscribe {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 2fr;
+
+  justify-items: center;
+  position: relative;
+  width: 100%;
+  margin: 100px 0;
+  padding: 0 40px;
+}
+.subscribe img {
+  height: 30px;
+}
+
+.subscribe .prodeucts,
+.subscribe .support {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.subscribe .prodeucts h1,
+.subscribe .support h1 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+.subscribe ul {
+  margin: 0;
+  padding: 0;
+}
+.subscribe ul li {
+  list-style: none;
+}
+.subscribe ul li a {
+  padding: 0 5px;
+  color: rgb(114, 114, 114);
+}
+
+.subscribe .email {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.subscribe .email .emailbutton {
+  display: flex;
+  flex-direction: column;
+}
+.subscribe .email .emailbutton input {
+  padding: 15px 30px;
+  border-radius: 20px;
+  background: linear-gradient(to right, rgb(46, 46, 46), rgb(8, 8, 8));
+  outline: none;
+  border: none;
+  color: cornsilk;
+  font-size: 18px;
+}
+.subscribe .email .emailbutton button {
+  color: aliceblue;
+  padding: 12px 25px;
+  border-radius: 22px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: linear-gradient(to right, rgb(49, 48, 48), rgb(8, 8, 8));
+  margin-top: 10px;
+}
+
+.subscribe .email .emailbutton button:hover {
+  background: linear-gradient(to right, rgb(75, 74, 74), rgb(8, 8, 8));
+}
+
+/* socail footer*/
+.subscribe .email ul {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.subscribe .email ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+.subscribe .email ul li a {
+  padding: 0 5px;
+  color: rgb(114, 114, 114);
+}
+
+/* copy right */
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  bottom: 20px;
+  padding: 50px;
+  color: rgba(138, 138, 138, 0.603);
+}
